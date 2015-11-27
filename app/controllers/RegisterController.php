@@ -1,10 +1,11 @@
 <?php
 
-class RegisterController extends \Phalcon\Mvc\Controller
+class RegisterController extends ControllerBase
 {
 	public function initialize()
 	{
 		$this->tag->setTitle("Sign up");
+		parent::initialize();
 	}
 	/**
 	* Action to register a new user
@@ -13,16 +14,16 @@ class RegisterController extends \Phalcon\Mvc\Controller
 	{
 		$form = new RegisterForm;
 		if ($this->request->isPost()){
-		   $name = $this->request->getPost('name', array('string', 'stripargs'));
-		   $username = $this->request->getPost('username', 'alphnum');
+		  
+		   $name = $this->request->getPost('name', array('string', 'striptags'));
+		   $username = $this->request->getPost('username', 'alphanum');
 		   $email = $this->request->getPost('email', 'email');
-		   $name = $this->request->getPost('name', array('string', 'stripargs'));
 		   $password = $this->request->getPost('password');
-		   $repeatPassword = $this->request->getPost('repeatPassword');
-
+		   $repeatPassword = $this->request->getPost('repeatPassword');	
 		   if ($password != $repeatPassword)
-		   {
+		      		   {
 			$this->flash->error('Mapasswords aya akasiyana');
+			return false;
 		   }
 		   
 		   $user = Users();

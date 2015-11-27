@@ -48,8 +48,8 @@ Class RegisterForm extends Form
 	)
 	);
 	$this->add($email);
-
-	//password
+	
+	//Password
 	$password = new Password('password');
 	$password->setLabel('Password');
 	$password->addValidators(array(
@@ -58,7 +58,7 @@ Class RegisterForm extends Form
 	))
 	)
 	);
-	$this->add($password);
+	$this->add($password);	
 
 	//Confirm Password
 	$repeatPassword = new Password('repeatPassword');
