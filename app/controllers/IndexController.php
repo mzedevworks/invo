@@ -13,6 +13,5 @@ class IndexController extends ControllerBase
             $this->flash->success('Iyi ndophalcon yeduka iyi kana waona page iri ibva waziva kuti you are on the right direction. But please usataura nesu itest site');
         }
     }
-
 }
 
