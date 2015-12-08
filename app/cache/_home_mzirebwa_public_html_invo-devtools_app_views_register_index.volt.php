@@ -42,13 +42,14 @@
   <div class="control-group">
     <?php echo $form->label('password', array('class' => 'control-label')); ?>
      <div class="controls">
-       <?php echo $form->render('name', array('class' => 'form-control')); ?>
-       <p class="help-block">(mavara masere anodikanwa pano)</p>
+       <?php echo $form->render('password', array('class' => 'form-control')); ?>
+       <p class="help-block">(required)</p>
        <div class="alert alter-warning" id="password_alert">
-	 <strong>Warning!</strong>Please provide a valid passowrd iweka iwe.
+	 <strong>Warning!</strong>Please privide a password iweka iwe.
        </div>
      </div>
   </div>
+
 
   <div class="control-group">
     <?php echo $form->label('repeatPassword', array('class' => 'control-label')); ?>

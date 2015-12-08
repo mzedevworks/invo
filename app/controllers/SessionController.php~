@@ -1,0 +1,40 @@
+<?php
+
+class SessionController extends ControllerBase
+{
+	public function initiaze()
+	{
+		$this->tag->setTitle('Sign Up/Sign in');
+		parent:initialize();
+	}
+
+	public function indexAction()
+	{
+		if(!$this->request->isPost()){
+			$this->tag->setDefault('email', 'musaz01@gmail.cm');
+			$this->tag->setDefault('password', 'benaya');
+		}	
+	}
+
+	/**
+	*Register an authenticated user
+	*
+	*@param users $user
+	*/
+	private function _registerSession(Users $user)
+	{
+		$this->session->set('auth', array(
+					    'id' => $user->id,
+					    'name' => $user->name
+		));				
+	}
+	
+	/**
+	* This action authenticate and logs a user into the application
+	*
+	*/
+	public function startAction()
+	{
+	
+	}
+}

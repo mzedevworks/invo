@@ -42,13 +42,14 @@
   <div class="control-group">
     {{ form.label('password', ['class': 'control-label']) }}
      <div class="controls">
-       {{ form.render('name', ['class': 'form-control']) }}
-       <p class="help-block">(mavara masere anodikanwa pano)</p>
+       {{ form.render('password', ['class': 'form-control']) }}
+       <p class="help-block">(required)</p>
        <div class="alert alter-warning" id="password_alert">
-	 <strong>Warning!</strong>Please provide a valid passowrd iweka iwe.
+	 <strong>Warning!</strong>Please privide a password iweka iwe.
        </div>
      </div>
   </div>
+
 
   <div class="control-group">
     {{ form.label('repeatPassword', ['class': 'control-label']) }}

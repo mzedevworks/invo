@@ -1,0 +1,27 @@
+<?php 
+/**
+ * ContactController
+ *
+ * Allows to contact the staff using a contact form
+ */
+class ContactController extends ControllerBase
+{
+	public function initialize()
+	{
+		$this->tag->setTtile("Wapinda mucontact");
+		parent::initialize();
+	}
+
+	public function indexAction()
+	{
+		$this->view->form = new ContactForm;
+	}
+
+	/**
+	*Saves the contact information to the database
+	*/
+	public 
+}
+
+
+

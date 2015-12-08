@@ -26,7 +26,7 @@ class RegisterController extends ControllerBase
 			return false;
 		   }
 		   
-		   $user = Users();
+		   $user = new  Users();
 		   $user->username = $username;
 		   $user->password = $password;
 		   $user->name = $name;
@@ -44,7 +44,7 @@ class RegisterController extends ControllerBase
 			$this->tag->setDefault('email', '');
 			$this->tag->setDefault('password', '');
 			$this->flash->success('Wapinda mudhara unogona kutanga kusota mainvoices ako');
-			return $this->forward('index/index');
+			echo $this->forward('session/index');
 		   }		   
 		}
 		$this->view->form = $form;		

@@ -1,0 +1,15 @@
+<?php
+class InvoicesController extends ControllerBase{
+      public function initialize(){
+      	     $this->tag->setTitle("Mainvoices ako wapinda");
+	     parent::initialize();
+      }
+      
+      /**
+      *Ndopakati indexka apa
+      *
+      */
+      public function index() {
+      	    
+      }
+}
